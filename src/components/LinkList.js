@@ -1,21 +1,25 @@
 import React, { Component } from 'react'
-import Link from './Link'
+import Link from './link'
 
 class LinkList extends Component {
-    render() {
-        const linksToRender = [
-            {
-                id: '1',
-                description: 'Screwing around with the tutorial for frontend feel',
-                url: 'https://www.apollographql.com/docs/react/'
-            },
-        ]
-        
+  render() {
+    const linksToRender = [
+      {
+        id: '1',
+        description: 'Prisma turns your database into a GraphQL API 😎',
+        url: 'https://www.prismagraphql.com',
+      },
+      {
+        id: '2',
+        description: 'The best GraphQL client',
+        url: 'https://www.apollographql.com/docs/react/',
+      },
+    ]
 
-        return (
-            <div>{linksToRender.map(link => Link key={link.id} link={link} />)}</div>
-        )
-    }
+    return (
+      <div>{linksToRender.map(link => <Link key={link.id} link={link} />)}</div>
+    )
+  }
 }
 
 export default LinkList
